@@ -1,41 +1,14 @@
 # stockflow-case-study
-# Part 3 – Low Stock Alerts API
 
-## Endpoint
+This repository contains my solution for the StockFlow inventory management case study.
 
-GET /api/companies/{company_id}/alerts/low-stock
+## Part 1
+Code review and debugging of product creation API.
 
-This endpoint returns products that are running low in stock for a given company.
+## Part 2
+Database schema design for multi warehouse inventory system.
 
----
+## Part 3
+Low stock alerts API implementation with business logic.
 
-## Business Logic
-
-The API checks:
-
-- Products with stock below threshold
-- Only products with recent sales (last 30 days)
-- Multiple warehouses per company
-- Supplier information for reordering
-
----
-
-## Assumptions
-
-- Each product has a predefined low stock threshold
-- Sales activity is checked for last 30 days
-- Inventory is stored per warehouse
-- Supplier is mapped to product
-
----
-
-## Edge Cases Handled
-
-- No recent sales → no alert
-- Zero stock → alert generated
-- Missing warehouse → skipped
-- Multiple warehouses supported
-
----
-
-## Example Response
+Assumptions and design decisions are documented inside each folder.
